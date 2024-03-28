@@ -1,0 +1,47 @@
+    Cucumber        Java - TestNG -> Cucumber (high level concepts)
+
+    TestNG is an open-source test automation framework for Java.
+    It is developed on the same lines as JUnit and NUnit.
+
+    Cucumber:
+    Framework executes automated acceptance tests written in the
+    “Gherkin” language. Gherkin is a domain-specific
+    language for behavior descriptions. Gherkin is business-readable.
+
+    Cucumber test automation makes use of two important files:
+
+   1. Feature file – Contains code written in Gherkin (plain English text)
+   2. Step definition file – Contains the actual code written by the developer
+   3. Test Runner File: In Cucumber, the test runner file executes the
+
+    Cucumber feature files and coordinates the steps defined
+    in those feature files with the corresponding step definitions.
+
+
+
+/***********************************************************************/
+Example: Pop up messaged is displayed when buttons are clicked and errors are gone
+this can be interpreted differently by QA or Developer or any person.
+
+Developer :Pop up message is displayed and errors are gone on button clicked
+QA- Pop up message is displayed -Only when buttons are clicked and errors are gone
+Keywords Used in Cucumber: Scenario, Feature, Feature file, Scenario outline, Step Definition
+Scenarios:
+
+
+/***********************************************************************/
+In Cucumber Testcases are represented as Scenarios.
+Scenarios contain Steps which are equivalent to test Steps and use the following keywords (Gherkin syntax) to denote them: Given, When, Then, But, and And (case sensitive).
+Given: Preconditions are mentioned in the Given keyword
+When: The purpose of the When Steps is to describe the user action.
+Then: The purpose of Then Steps is to observe the expected output. The observations should b related to the business value/benefit of your Feature description.
+I
+Scenario: Make Minimum Due payment
+Given user is on Pay credit card page
+When user fills all details and select Minimum amount option
+And User clicks on Pay button
+Then Credit Card confirmation page is displayed
+
+
+
+When we specify a business requirement, sometimes there are multiple pre and expected outcomes

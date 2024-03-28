@@ -1,0 +1,72 @@
+1. What is the Design Pattern you have used in writing the tests in the Framework?
+Our Framework was based on Selenium  from POM
+a)Page Object Model -->Each class file will contain only corresponding web page elements
+b) it is subset - Page Factory - (the initElements method is used to initialize web elements.
+@findBy-- to find web elements using different locators
+@FindBy(id="elementId") WebElement element;
+constructor
+
+2. How are reusable utilities handled within the framework?
+wait for item element to or spinner to disappear  or page , go to cart
+we use an Abstract method
+For all selenium methods we making sure one abstract class the go to handle
+for example : wait to element to appear, go to cart ...
+Question: how are u reusing them in all classes?
+basically we are inheriting that reusable method class into all over
+page object class
+
+Base test common rescales methods (log to application
+
+
+
+3. Where did you use Inheritance OOPS Concept in your framework?
+refer to what we did q2  - mention post request and
+
+4. How did you drive the data from external files in the framework?
+json file to pass the data
+In TestNG there concept @DataProvider  - can access hash maps as an objects to sent the data
+we wrote a method that convert jason file in hash maps
+once it is converted that hush map object then gets passed  back @DataProvider
+
+we use Jaskon databind methods to String to hashmap (objectMapper)
+
+
+5. Did you use Interfaces in the framework? If so, what is the scope of it?
+Listeners.java that implements ITestListener()  is an interface
+WebDriver is also Interfaces
+
+6. How are you achieving Encapsulation in the framework?
+We are hiding our "private" fields and only exposing our actions methods to public
+
+
+7. Does your Framework Support Parallel Runs? How are you writing Thread safe code?
+<suite parallel -- test  threadLocal - store information as thread ID
+
+8. Do you have static keywords in the framework? If so, its usage?
+not used
+
+9. How are you sending Global Properties to your test at run time?
+in our base test we used a Property class file reading any into ou
+GlobalData.properties   loading the file at runtime and according o the oprtion
+URL / time out / brower namei can drive it from maven with getProperty()
+
+10. What is the mechanism you use to run only selected set of tests inside the framework?
+We are using TestNG groups tests with annotation by marking the class wth groups
+and in our pom we define profile with group to run
+
+
+11. How are you handling Flaky tests in the framework?
+there is interface in TestNG called IRetryAnalyzer,
+add another helper attribute alled IRetryAnalyzer
+
+12. Does your Framework take Screenshot on test
+Listeners.java that implements ITestListener()
+catch and and print the pic to the output directory
+
+13) Explain Framework Architecture
+
+
+
+
+
+

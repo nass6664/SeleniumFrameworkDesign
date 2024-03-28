@@ -1,0 +1,6 @@
+above(): Element located above with respect to the specified element.
+• Below: Element located below with respect to the specified element.
+• toLeftOf): Element located to the left of specified element.
+• toRightOf(): Element located to the right of the specified element.
+Syntax:
+driver.findElement(with TagName("XX").above(WebElement))
